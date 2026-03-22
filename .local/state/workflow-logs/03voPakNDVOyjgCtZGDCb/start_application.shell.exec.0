@@ -1,0 +1,15 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K6:24:26 PM [express] serving on port 5000 at 0.0.0.0
+6:24:33 PM [express] GET /api/user 304 in 7ms :: {"id":1,"username":"admin","password":"$2b$10$MPLMswV3NHKfDekJEs4u6uMQyd3VVPKHiTJJP8XOZ9adPM.FX94De","role":"admin","tempPassword":null,"mustResetPassword":false,"createdAt":"2026-01-19T14:46:17.207Z"}
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:24:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Inventory.tsx, /src/index.css[22m

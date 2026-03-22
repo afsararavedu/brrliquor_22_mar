@@ -1,0 +1,6 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K1:53:19 PM [express] serving on port 5000 at 0.0.0.0
+1:53:25 PM [express] GET /api/user 304 in 5ms :: {"id":1,"username":"admin","password":"$2b$10$MPLMswV3NHKfDekJEs4u6uMQyd3VVPKHiTJJP8XOZ9adPM.FX94De","role":"admin","tempPassword":null,"mustResetPassword":false,"createdAt":"2026-01-19T14:46:17.207Z"}

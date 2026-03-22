@@ -1,0 +1,193 @@
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+[1G[0K1:48:30 PM [express] serving on port 5000 at 0.0.0.0
+1:48:36 PM [express] GET /api/user 401 in 2ms
+1:49:53 PM [express] GET /api/user 304 in 6ms :: {"id":1,"username":"admin","password":"$2b$10$MPLMswV3NHKfDekJEs4u6uMQyd3VVPKHiTJJP8XOZ9adPM.FX94De","role":"admin","tempPassword":null,"mustResetPassword":false,"createdAt":"2026-01-19T14:46:17.207Z"}
+Internal Server Error: error: column "id" does not exist
+    at [90m/home/runner/workspace/[39mnode_modules/[4mpg-pool[24m/index.js:45:11
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async <anonymous> [90m(/home/runner/workspace/[39mnode_modules/[4msrc[24m/node-postgres/session.ts:104:19[90m)[39m
+    at async DatabaseStorage.isSalesSubmittedForDate [90m(/home/runner/workspace/[39mserver/storage.ts:165:22[90m)[39m
+    at async <anonymous> [90m(/home/runner/workspace/[39mserver/routes.ts:428:25[90m)[39m {
+  length: [33m101[39m,
+  severity: [32m'ERROR'[39m,
+  code: [32m'42703'[39m,
+  detail: [90mundefined[39m,
+  hint: [90mundefined[39m,
+  position: [32m'8'[39m,
+  internalPosition: [90mundefined[39m,
+  internalQuery: [90mundefined[39m,
+  where: [90mundefined[39m,
+  schema: [90mundefined[39m,
+  table: [90mundefined[39m,
+  column: [90mundefined[39m,
+  dataType: [90mundefined[39m,
+  constraint: [90mundefined[39m,
+  file: [32m'parse_relation.c'[39m,
+  line: [32m'3727'[39m,
+  routine: [32m'errorMissingColumn'[39m
+}
+1:49:56 PM [express] GET /api/shop-details 304 in 18ms :: [{"id":1,"name":"M/s Balaji Wines","address":"Door No. 20-39 Situated At Kurnool Road Kothakota Municipality","retailShopExciseTax":"5500000","licenseNo":"WNP018","panNumber":"CHCPN0593A","namePhone":"9876534443","invoiceDate":"30/12/2025","gazetteCodeLicenseeIssueDate":"WNP018 / 01-DEC-25","icdcNumber":"ICDC019301225012062","createdAt":"2026-02-23T06:15:03.580Z"}]
+1:49:56 PM [express] GET /api/sales/is-submitted 500 in 15ms :: {"message":"column \"id\" does not exist","stack":"error: column \"id\" does not exist\n    at /home/runner/workspace/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async <anonymous> (/home/runner/workspace/node_modules/src/node-postgres/session.ts:104:19)\n    at async DatabaseStorage.isSalesSubmittedForDate (/home/runner/workspace/server/storage.ts:165:22)\n    at async <anonymous> (/home/runner/workspace/server/routes.ts:428:25)","details":{"length":101,"name":"error","severity":"ERROR","code":"42703","position":"8","file":"parse_relation.c","line":"3727","routine":"errorMissingColumn"}}
+1:49:56 PM [express] GET /api/sales 200 in 26ms :: []
+1:49:56 PM [express] GET /api/sales/summary 304 in 38ms :: {"openingBalanceValue":1178834.9100000001,"newStockValue":5329794.910000001,"soldStockValue":3880641.5700000003,"closingBalanceValue":1132634.9100000001,"categories":{"Other":{"opening":291,"newStock":18007,"sold":213,"closing":39},"IML":{"opening":7409,"newStock":7409,"sold":25599,"closing":7409},"Beer":{"opening":0,"newStock":0,"sold":0,"closing":0},"IMFL":{"opening":59,"newStock":59,"sold":181,"closing":59}}}
+1:50:03 PM [express] POST /api/sales/sync-from-stock 500 in 8ms :: {"message":"Failed to sync stock to sales: column \"id\" does not exist"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:52:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.tsx, /src/index.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:52:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.tsx, /src/index.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:52:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Sales.tsx, /src/index.css[22m [33m(x3)[39m
+Internal Server Error: error: column "id" does not exist
+    at [90m/home/runner/workspace/[39mnode_modules/[4mpg-pool[24m/index.js:45:11
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+    at async <anonymous> [90m(/home/runner/workspace/[39mnode_modules/[4msrc[24m/node-postgres/session.ts:104:19[90m)[39m
+    at async DatabaseStorage.isSalesSubmittedForDate [90m(/home/runner/workspace/[39mserver/storage.ts:165:22[90m)[39m
+    at async <anonymous> [90m(/home/runner/workspace/[39mserver/routes.ts:428:25[90m)[39m {
+  length: [33m101[39m,
+  severity: [32m'ERROR'[39m,
+  code: [32m'42703'[39m,
+  detail: [90mundefined[39m,
+  hint: [90mundefined[39m,
+  position: [32m'8'[39m,
+  internalPosition: [90mundefined[39m,
+  internalQuery: [90mundefined[39m,
+  where: [90mundefined[39m,
+  schema: [90mundefined[39m,
+  table: [90mundefined[39m,
+  column: [90mundefined[39m,
+  dataType: [90mundefined[39m,
+  constraint: [90mundefined[39m,
+  file: [32m'parse_relation.c'[39m,
+  line: [32m'3727'[39m,
+  routine: [32m'errorMissingColumn'[39m
+}
+1:53:00 PM [express] GET /api/sales/is-submitted 500 in 7ms :: {"message":"column \"id\" does not exist","stack":"error: column \"id\" does not exist\n    at /home/runner/workspace/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async <anonymous> (/home/runner/workspace/node_modules/src/node-postgres/session.ts:104:19)\n    at async DatabaseStorage.isSalesSubmittedForDate (/home/runner/workspace/server/storage.ts:165:22)\n    at async <anonymous> (/home/runner/workspace/server/routes.ts:428:25)","details":{"length":101,"name":"error","severity":"ERROR","code":"42703","position":"8","file":"parse_relation.c","line":"3727","routine":"errorMissingColumn"}}
